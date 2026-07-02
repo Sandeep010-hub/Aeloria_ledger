@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150/004f54/ffffff?text=Aeloria" alt="Aeloria Logo" width="100"/>
-  <h1>Aeloria Ledger</h1>
+  <h1>💎 Aeloria Ledger</h1>
   <p><strong>The Enterprise Finance OS for Modern Operations</strong></p>
 </div>
 
