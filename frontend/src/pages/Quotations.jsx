@@ -327,7 +327,7 @@ const Quotations = () => {
               </div>
 
               <form onSubmit={handleCreateSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <label style={{ fontSize: '11px', fontWeight: '700', color: 'var(--on-surface-variant)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Client Account *</label>
                     <select
@@ -358,9 +358,9 @@ const Quotations = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <label style={{ fontSize: '11px', fontWeight: '700', color: 'var(--on-surface-variant)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Item Specifications *</label>
                   
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', overflowX: 'auto', paddingBottom: '8px' }} className="custom-scrollbar">
                     {quoteData.items.map((item, index) => (
-                      <div key={index} style={{ display: 'grid', gridTemplateColumns: '6fr 2fr 2fr 1fr', gap: '8px', alignItems: 'center' }}>
+                      <div key={index} style={{ display: 'grid', gridTemplateColumns: '6fr 2fr 2fr 1fr', gap: '8px', alignItems: 'center', minWidth: '550px' }}>
                         <input
                           type="text"
                           required
@@ -407,9 +407,9 @@ const Quotations = () => {
                 </div>
 
                 {/* TAX, DISCOUNT AND TOTAL SUMMARIES */}
-                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px', borderTop: '1px solid var(--surface-variant)', paddingTop: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', borderTop: '1px solid var(--surface-variant)', paddingTop: '20px' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                         <label style={{ fontSize: '10px', fontWeight: '700', color: 'var(--on-surface-variant)' }}>GST rate (%)</label>
                         <input

@@ -149,7 +149,7 @@ const Settings = () => {
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: '8fr 4fr',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
         gap: '28px',
         alignItems: 'start'
       }} className="settings-layout-split">
@@ -163,7 +163,7 @@ const Settings = () => {
               Personal Identity Configurations
             </h3>
             
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <label style={{ fontSize: '11px', fontWeight: '700', color: 'var(--on-surface-variant)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Your Account Name *
@@ -211,7 +211,7 @@ const Settings = () => {
               </div>
             )}
 
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '16px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <label style={{ fontSize: '11px', fontWeight: '700', color: 'var(--on-surface-variant)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Registered Company Name *
@@ -247,7 +247,7 @@ const Settings = () => {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <label style={{ fontSize: '11px', fontWeight: '700', color: 'var(--on-surface-variant)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Corporate Phone
