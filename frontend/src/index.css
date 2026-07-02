@@ -1,0 +1,322 @@
+/* Global Vanilla CSS Design System for Aeloria Ledger */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  /* Color Tokens - Material Design 3 Mapped */
+  --primary: #00696f;
+  --primary-container: #00f2ff;
+  --on-primary: #ffffff;
+  --on-primary-container: #006a71;
+  
+  --secondary: #515f78;
+  --secondary-container: #d2e0fe;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #55637d;
+  
+  --tertiary: #505f76;
+  --tertiary-container: #ccdcf6;
+  --on-tertiary: #ffffff;
+  --on-tertiary-container: #516177;
+
+  --background: #f7f9fb;
+  --on-background: #191c1e;
+
+  /* Surfaces & Containers */
+  --surface: #f7f9fb;
+  --surface-bright: #f7f9fb;
+  --surface-dim: #d8dadc;
+  --surface-variant: #e0e3e5;
+  --on-surface: #191c1e;
+  --on-surface-variant: #3a494b;
+
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f2f4f6;
+  --surface-container: #eceef0;
+  --surface-container-high: #e6e8ea;
+  --surface-container-highest: #e0e3e5;
+
+  --inverse-surface: #2d3133;
+  --inverse-on-surface: #eff1f3;
+  --inverse-primary: #00dbe7;
+
+  --outline: #6a7a7b;
+  --outline-variant: #b9cacb;
+
+  /* Feedback Colors */
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  
+  --success: #2e7d32;
+  --success-container: #e8f5e9;
+  --on-success-container: #1b5e20;
+
+  --warning: #ed6c02;
+  --warning-container: #fff3e0;
+  --on-warning-container: #e65100;
+
+  /* Spacing Grid (8px Base) */
+  --space-base: 8px;
+  --space-gutter: 24px;
+  --space-desktop: 40px;
+  --space-mobile: 16px;
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+
+  /* Typography Fonts */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Geist', var(--font-body);
+
+  /* Glassmorphism properties */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: 1px solid #e2e8f0;
+  --glass-backdrop: blur(12px);
+
+  /* Transition timing */
+  --transition-spring: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-elastic: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-size: 16px;
+  line-height: 24px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--on-background);
+  font-weight: 600;
+}
+
+/* Glass panel styled overlays */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: var(--glass-border);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-spring);
+}
+
+.glass-panel:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Premium micro scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--surface-variant);
+  border-radius: var(--radius-full);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--outline-variant);
+}
+
+/* Material Design Icon configurations */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Universal Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition-spring);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+.btn-primary:hover {
+  background-color: #005055;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--surface-container-highest);
+  color: var(--on-surface-variant);
+  border: 1px solid var(--outline-variant);
+}
+.btn-secondary:hover {
+  background-color: var(--surface-container-high);
+  color: var(--on-surface);
+}
+
+.btn-danger {
+  background-color: var(--error-container);
+  color: var(--on-error-container);
+  border: 1px solid var(--error);
+}
+.btn-danger:hover {
+  background-color: var(--error);
+  color: var(--on-error);
+}
+
+/* Badge Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-heading);
+}
+
+.badge-success {
+  background-color: var(--success-container);
+  color: var(--on-success-container);
+}
+.badge-pending {
+  background-color: var(--warning-container);
+  color: var(--on-warning-container);
+}
+.badge-danger {
+  background-color: var(--error-container);
+  color: var(--on-error-container);
+}
+.badge-neutral {
+  background-color: var(--surface-container-high);
+  color: var(--on-surface-variant);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-col: column;
+  gap: 8px;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: var(--shadow-premium);
+  min-width: 280px;
+  animation: slideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.toast-success {
+  background-color: var(--primary);
+  border-left: 4px solid var(--primary-container);
+}
+.toast-error {
+  background-color: var(--error);
+  border-left: 4px solid var(--error-container);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Lining Tabular Figures for numerical tables */
+.lining-numbers {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dashboard layouts skeleton styling */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--background);
+}
+
+/* Grid configurations */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-gutter);
+  padding: var(--space-gutter);
+  max-width: var(--space-container-max);
+  margin: 0 auto;
+  width: 100%;
+}

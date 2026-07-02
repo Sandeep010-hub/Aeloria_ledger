@@ -1,0 +1,15 @@
+{
+  "name": "aeloria-ledger-root",
+  "version": "1.0.0",
+  "description": "Aeloria Ledger Monorepo",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run dev:frontend\"",
+    "start:server": "cd server && npm start",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "concurrently \"cd server && npm install\" \"cd frontend && npm install\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
